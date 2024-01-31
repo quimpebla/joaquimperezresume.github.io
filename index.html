@@ -70,6 +70,8 @@
         /* Align time and place to the right for work experience */
         section h3 {
             position: relative;
+            text-align: right;
+            margin-bottom: 5px; /* Add space between time and location */
         }
 
         section h3::before {
@@ -83,8 +85,9 @@
 
         section ul li:nth-child(2)::before {
             content: attr(data-location); /* Use data attribute for location */
+            display: block;
             position: absolute;
-            top: 0;
+            top: 20px;
             right: 0;
             font-weight: normal; /* Adjust font style as needed */
             color: #555; /* Adjust color as needed */
