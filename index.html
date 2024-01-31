@@ -66,6 +66,29 @@
         ul ul {
             margin-top: 5px;
         }
+
+        /* Align time and place to the right for work experience */
+        section h3 {
+            position: relative;
+        }
+
+        section h3::before {
+            content: attr(data-time); /* Use data attribute for time */
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: normal; /* Adjust font style as needed */
+            color: #555; /* Adjust color as needed */
+        }
+
+        section ul li:nth-child(2)::before {
+            content: attr(data-location); /* Use data attribute for location */
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: normal; /* Adjust font style as needed */
+            color: #555; /* Adjust color as needed */
+        }
     </style>
 </head>
 <body>
@@ -104,10 +127,8 @@
     <section>
         <h2>Work Experience</h2>
 
-        <h3>Hotel Altafulla Mar - Receptionist</h3>
+        <h3 data-time="July – September (2020-2023)" data-location="Tarragona, ES">Hotel Altafulla Mar - Receptionist</h3>
         <ul>
-            <li>July – September (2020-2023)</li>
-            <li>Tarragona, ES</li>
             <li>Managed client interactions both in person and on the phone.</li>
             <li>Handled check-ins and check-outs efficiently.</li>
             <li>Resolved client issues and fulfilled special requests.</li>
@@ -148,7 +169,7 @@
         <ul>
             <li>2017-2019</li>
             <li>Barcelona, ES</li>
-            <li>rovided math tutoring to lower-class students.</li>
+            <li>Provided math tutoring to lower-class students.</li>
         </ul>
     </section>
 
